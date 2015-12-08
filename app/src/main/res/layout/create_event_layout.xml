@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d8d8d8"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/today"
+        android:id="@+id/todayText"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#b9b9b9"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/tomorrow"
+        android:id="@+id/tomorrowText"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#b9b9b9"
+        android:layout_toRightOf="@+id/todayText"
+        android:layout_toEndOf="@+id/todayText" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/close_icon"
+        android:background="@null"
+        android:layout_marginRight="20dp"
+        android:layout_alignTop="@+id/todayText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:59am"
+        android:id="@+id/fromButton"
+        android:layout_below="@+id/todayText"
+        android:textColor="#b9b9b9"
+        android:background="@drawable/rounded_time_button"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:59pm"
+        android:id="@+id/toButton"
+        android:background="@drawable/rounded_time_button"
+        android:textColor="#b9b9b9"
+        android:textStyle="bold"
+        android:layout_above="@+id/locationENTRY"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="10dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/locationENTRY"
+        android:hint="@string/loc"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="30dp"
+        android:paddingLeft="30dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textColor="#b9b9b9"
+        android:background="@drawable/rounded_location_button"
+        android:textColorHint="#b9b9b9"
+        android:textStyle="bold"
+        android:layout_below="@+id/fromButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/locationENTRY"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/descriptionCONTAINER"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What are you up to?"
+            android:inputType="textMultiLine"
+            android:background="@android:color/transparent"
+            android:isScrollContainer="true"
+            android:ems="15"
+            android:textStyle="bold"
+            android:textColor="#b9b9b9"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#b9b9b9"
+            android:id="@+id/descriptionEDITOR"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shareBTN"
+            android:id="@+id/shareButton"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="#0081ff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
